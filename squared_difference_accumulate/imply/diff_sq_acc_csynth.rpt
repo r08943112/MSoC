@@ -1,0 +1,194 @@
+
+
+================================================================
+== Vivado HLS Report for 'diff_sq_acc'
+================================================================
+* Date:           Fri Nov 13 00:14:08 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        hls_diff_sq_acc
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.371 ns |   0.63 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       20|       20| 0.100 us | 0.100 us |   10|   10| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|     10|       -|      -|    -|
+|Expression       |        -|      -|       0|    335|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        4|      -|     232|    252|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    159|    -|
+|Register         |        -|      -|     556|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        4|     10|     788|    746|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        1|      4|   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------+----------------------------+---------+-------+-----+-----+-----+
+    |           Instance           |           Module           | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +------------------------------+----------------------------+---------+-------+-----+-----+-----+
+    |diff_sq_acc_AXILiteS_s_axi_U  |diff_sq_acc_AXILiteS_s_axi  |        4|      0|  232|  252|    0|
+    +------------------------------+----------------------------+---------+-------+-----+-----+-----+
+    |Total                         |                            |        4|      0|  232|  252|    0|
+    +------------------------------+----------------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    +--------------------------+----------------------+--------------+
+    |         Instance         |        Module        |  Expression  |
+    +--------------------------+----------------------+--------------+
+    |diff_sq_acc_mac_mcud_U4   |diff_sq_acc_mac_mcud  | i0 + i1 * i1 |
+    |diff_sq_acc_mac_mcud_U6   |diff_sq_acc_mac_mcud  | i0 + i1 * i1 |
+    |diff_sq_acc_mac_mcud_U7   |diff_sq_acc_mac_mcud  | i0 + i1 * i1 |
+    |diff_sq_acc_mac_mcud_U8   |diff_sq_acc_mac_mcud  | i0 + i1 * i1 |
+    |diff_sq_acc_mac_mcud_U9   |diff_sq_acc_mac_mcud  | i0 + i1 * i1 |
+    |diff_sq_acc_mac_mcud_U10  |diff_sq_acc_mac_mcud  | i0 + i1 * i1 |
+    |diff_sq_acc_mul_mbkb_U1   |diff_sq_acc_mul_mbkb  |    i0 * i0   |
+    |diff_sq_acc_mul_mbkb_U2   |diff_sq_acc_mul_mbkb  |    i0 * i0   |
+    |diff_sq_acc_mul_mbkb_U3   |diff_sq_acc_mul_mbkb  |    i0 * i0   |
+    |diff_sq_acc_mul_mbkb_U5   |diff_sq_acc_mul_mbkb  |    i0 * i0   |
+    +--------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |add_ln47_3_fu_429_p2  |     +    |      0|  0|  32|          32|          32|
+    |add_ln47_7_fu_419_p2  |     +    |      0|  0|  39|          32|          32|
+    |add_ln47_8_fu_433_p2  |     +    |      0|  0|  32|          32|          32|
+    |sub_ln45_1_fu_396_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln45_2_fu_413_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln45_3_fu_277_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln45_4_fu_348_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln45_5_fu_297_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln45_6_fu_365_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln45_7_fu_382_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln45_8_fu_263_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln45_9_fu_314_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln45_fu_328_p2    |     -    |      0|  0|  23|          16|          16|
+    |ap_enable_pp0         |    xor   |      0|  0|   2|           1|           2|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |Total                 |          |      0|  0| 335|         257|         258|
+    +----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |a_V_address0             |  50|         11|    4|         44|
+    |ap_NS_fsm                |  50|         11|    1|         11|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |b_V_address0             |  50|         11|    4|         44|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 159|         35|   10|        101|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |add_ln47_1_reg_726       |  32|   0|   32|          0|
+    |add_ln47_2_reg_768       |  32|   0|   32|          0|
+    |add_ln47_4_reg_736       |  32|   0|   32|          0|
+    |add_ln47_5_reg_674       |  32|   0|   32|          0|
+    |add_ln47_6_reg_741       |  32|   0|   32|          0|
+    |add_ln47_7_reg_746       |  32|   0|   32|          0|
+    |add_ln47_8_reg_773       |  32|   0|   32|          0|
+    |add_ln47_reg_757         |  32|   0|   32|          0|
+    |ap_CS_fsm                |  10|   0|   10|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |mul_ln46_3_reg_606       |  32|   0|   32|          0|
+    |mul_ln46_5_reg_638       |  32|   0|   32|          0|
+    |mul_ln46_8_reg_591       |  32|   0|   32|          0|
+    |mul_ln46_reg_679         |  32|   0|   32|          0|
+    |sub_ln45_1_reg_705       |  16|   0|   16|          0|
+    |sub_ln45_2_reg_731       |  16|   0|   16|          0|
+    |sub_ln45_3_reg_533       |  16|   0|   16|          0|
+    |sub_ln45_4_reg_633       |  16|   0|   16|          0|
+    |sub_ln45_5_reg_560       |  16|   0|   16|          0|
+    |sub_ln45_6_reg_659       |  16|   0|   16|          0|
+    |sub_ln45_7_reg_700       |  16|   0|   16|          0|
+    |sub_ln45_8_reg_528       |  16|   0|   16|          0|
+    |sub_ln45_9_reg_596       |  16|   0|   16|          0|
+    |sub_ln45_reg_601         |  16|   0|   16|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 556|   0|  556|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+--------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|   Protocol   | Source Object|    C Type    |
++------------------------+-----+-----+--------------+--------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_AWREADY  | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_AWADDR   |  in |    7|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WVALID   |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WREADY   | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WDATA    |  in |   32|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WSTRB    |  in |    4|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_ARVALID  |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_ARREADY  | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_ARADDR   |  in |    7|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RVALID   | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RREADY   |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RDATA    | out |   32|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RRESP    | out |    2|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_BVALID   | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_BREADY   |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_BRESP    | out |    2|     s_axi    |   AXILiteS   |    pointer   |
+|ap_clk                  |  in |    1| ap_ctrl_none |  diff_sq_acc | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_none |  diff_sq_acc | return value |
++------------------------+-----+-----+--------------+--------------+--------------+
+
