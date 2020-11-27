@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vivado HLS Report for 'matrixmul'
+================================================================
+* Date:           Fri Nov 27 17:11:40 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        proj_memory_porting_and_ii
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.170 ns |   0.63 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        4|        4| 20.000 ns | 20.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|     18|       -|      -|    -|
+|Expression       |        -|      0|       0|    371|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        0|      -|     480|    616|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|     533|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|     18|    1013|    987|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      8|   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+--------------------------+---------+-------+-----+-----+-----+
+    |          Instance          |          Module          | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +----------------------------+--------------------------+---------+-------+-----+-----+-----+
+    |matrixmul_AXILiteS_s_axi_U  |matrixmul_AXILiteS_s_axi  |        0|      0|  480|  616|    0|
+    +----------------------------+--------------------------+---------+-------+-----+-----+-----+
+    |Total                       |                          |        0|      0|  480|  616|    0|
+    +----------------------------+--------------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    +--------------------------+----------------------+--------------+
+    |         Instance         |        Module        |  Expression  |
+    +--------------------------+----------------------+--------------+
+    |matrixmul_mac_mulbkb_U1   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U2   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U3   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U4   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U5   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U6   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U7   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U8   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U9   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U10  |matrixmul_mac_mulcud  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U11  |matrixmul_mac_mulcud  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U12  |matrixmul_mac_mulcud  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U13  |matrixmul_mac_mulcud  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U14  |matrixmul_mac_mulcud  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U15  |matrixmul_mac_mulcud  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U16  |matrixmul_mac_mulcud  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U17  |matrixmul_mac_mulcud  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U18  |matrixmul_mac_mulcud  | i0 + i1 * i2 |
+    +--------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |mul_ln111_10_fu_323_p2  |     *    |      0|  0|  41|           8|           8|
+    |mul_ln111_13_fu_329_p2  |     *    |      0|  0|  41|           8|           8|
+    |mul_ln111_16_fu_335_p2  |     *    |      0|  0|  41|           8|           8|
+    |mul_ln111_19_fu_347_p2  |     *    |      0|  0|  41|           8|           8|
+    |mul_ln111_1_fu_287_p2   |     *    |      0|  0|  41|           8|           8|
+    |mul_ln111_22_fu_353_p2  |     *    |      0|  0|  41|           8|           8|
+    |mul_ln111_25_fu_359_p2  |     *    |      0|  0|  41|           8|           8|
+    |mul_ln111_4_fu_299_p2   |     *    |      0|  0|  41|           8|           8|
+    |mul_ln111_7_fu_311_p2   |     *    |      0|  0|  41|           8|           8|
+    |ap_enable_pp0           |    xor   |      0|  0|   2|           1|           2|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |Total                   |          |      0|  0| 371|          73|          74|
+    +------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |a_0_0_read_reg_491       |   8|   0|    8|          0|
+    |a_0_1_read_reg_501       |   8|   0|    8|          0|
+    |a_1_0_read_reg_559       |   8|   0|    8|          0|
+    |a_1_1_read_reg_564       |   8|   0|    8|          0|
+    |a_2_0_read_reg_576       |   8|   0|    8|          0|
+    |a_2_1_read_reg_581       |   8|   0|    8|          0|
+    |add_ln111_10_reg_705     |  16|   0|   16|          0|
+    |add_ln111_11_reg_750     |  16|   0|   16|          0|
+    |add_ln111_12_reg_710     |  16|   0|   16|          0|
+    |add_ln111_13_reg_755     |  16|   0|   16|          0|
+    |add_ln111_14_reg_715     |  16|   0|   16|          0|
+    |add_ln111_15_reg_760     |  16|   0|   16|          0|
+    |add_ln111_16_reg_720     |  16|   0|   16|          0|
+    |add_ln111_17_reg_765     |  16|   0|   16|          0|
+    |add_ln111_1_reg_725      |  16|   0|   16|          0|
+    |add_ln111_2_reg_685      |  16|   0|   16|          0|
+    |add_ln111_3_reg_730      |  16|   0|   16|          0|
+    |add_ln111_4_reg_690      |  16|   0|   16|          0|
+    |add_ln111_5_reg_735      |  16|   0|   16|          0|
+    |add_ln111_6_reg_695      |  16|   0|   16|          0|
+    |add_ln111_7_reg_740      |  16|   0|   16|          0|
+    |add_ln111_8_reg_700      |  16|   0|   16|          0|
+    |add_ln111_9_reg_745      |  16|   0|   16|          0|
+    |add_ln111_reg_680        |  16|   0|   16|          0|
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4  |   1|   0|    1|          0|
+    |b_0_0_read_reg_496       |   8|   0|    8|          0|
+    |b_0_1_read_reg_525       |   8|   0|    8|          0|
+    |b_0_2_read_reg_542       |   8|   0|    8|          0|
+    |b_1_0_read_reg_506       |   8|   0|    8|          0|
+    |b_1_1_read_reg_530       |   8|   0|    8|          0|
+    |b_1_2_read_reg_547       |   8|   0|    8|          0|
+    |mul_ln111_10_reg_643     |  16|   0|   16|          0|
+    |mul_ln111_13_reg_648     |  16|   0|   16|          0|
+    |mul_ln111_16_reg_653     |  16|   0|   16|          0|
+    |mul_ln111_19_reg_665     |  16|   0|   16|          0|
+    |mul_ln111_1_reg_607      |  16|   0|   16|          0|
+    |mul_ln111_22_reg_670     |  16|   0|   16|          0|
+    |mul_ln111_25_reg_675     |  16|   0|   16|          0|
+    |mul_ln111_4_reg_619      |  16|   0|   16|          0|
+    |mul_ln111_7_reg_631      |  16|   0|   16|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 533|   0|  533|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+--------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|   Protocol   | Source Object|    C Type    |
++------------------------+-----+-----+--------------+--------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_AWREADY  | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_AWADDR   |  in |    8|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WVALID   |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WREADY   | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WDATA    |  in |   32|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WSTRB    |  in |    4|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_ARVALID  |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_ARREADY  | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_ARADDR   |  in |    8|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RVALID   | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RREADY   |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RDATA    | out |   32|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RRESP    | out |    2|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_BVALID   | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_BREADY   |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_BRESP    | out |    2|     s_axi    |   AXILiteS   |    pointer   |
+|ap_clk                  |  in |    1| ap_ctrl_none |   matrixmul  | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_none |   matrixmul  | return value |
++------------------------+-----+-----+--------------+--------------+--------------+
+
