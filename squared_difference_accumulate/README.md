@@ -41,7 +41,7 @@ This is a squared_difference_accumulate hls projects.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* vivado_hls run_diff_sq_acc_hls_script.tcl
+* vivado_hls -f run_diff_sq_acc_hls_script.tcl
 
 ## Algorithm
 * Given two array
