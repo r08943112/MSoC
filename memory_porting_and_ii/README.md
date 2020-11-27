@@ -44,7 +44,7 @@ This is a memory_porting_and_ii hls projects.
 * vivado_hls -f run_memory_porting_and_ii_script.tcl
 
 ## Algorithm
-* Given two array
+* Given two matrix
   * Perform matrix multiplication and output the result
 
 ## References
