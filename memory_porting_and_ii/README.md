@@ -41,7 +41,7 @@ This is a memory_porting_and_ii hls projects.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* vivado_hls run_memory_porting_and_ii_script.tcl
+* vivado_hls -f run_memory_porting_and_ii_script.tcl
 
 ## Algorithm
 * Given two array
