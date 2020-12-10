@@ -42,7 +42,7 @@ if __name__ == "__main__":
     regIP.write(0x00, 0x01)
     for i in range(MAT_A_ROWS):
         for j in range(MAT_B_COLS):
-            hw_result = regIP.read(0xa0 + (i*3+j)*8)
+            hw_result[i][j] = regIP.read(0xa0 + (i*3+j)*8)
     
     print("{\n")
     for i in range(MAT_A_ROWS):
