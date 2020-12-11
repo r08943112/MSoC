@@ -47,7 +47,7 @@ This is a atan2_cordic hls projects.
 * The function to be achieved by this project is to use CORDIC to calculate Atan2(), give a coordinate file as input data, output the result as the answer, and compare the answer with the simulation result of matlab. In this project, the original author mainly discusses four methods. The first is to use 64-bit floating point numbers for calculation, the second is to use 32-bit floating point numbers for calculation, and the third is Use the CORDIC algorithm to do the calculation, and the fourth is to use the simplified CORDIC algorithm to calculate.
 
 ## References
-* ~Xilinx/Vivado/2019.2/examples/design
+* https://github.com/Xilinx/HLx_Examples
 <!-- CONTRIBUTING -->
 ## Contributing
 * Zuo-Yu Wang
