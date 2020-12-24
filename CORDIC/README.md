@@ -50,6 +50,7 @@ This is a atan2_cordic hls projects.
 
 ## References
 * https://github.com/KastnerRG/pp4fpgas/tree/master/examples
+
 <!-- CONTRIBUTING -->
 ## Contributing
 * Zuo-Yu Wang
@@ -57,7 +58,7 @@ This is a atan2_cordic hls projects.
 
 <!-- LICENSE -->
 ## License
-* Xilinx/Vivado/2019.2/examples/design
+* https://github.com/KastnerRG/pp4fpgas/tree/master/examples
 
 
 <!-- CONTACT -->
