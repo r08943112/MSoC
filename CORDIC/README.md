@@ -26,7 +26,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a atan2_cordic hls projects.
+This is a CORDIC hls projects.
 
 **Directory structure**
 * **README.md** - introduce the project, algorithm, reference ....
